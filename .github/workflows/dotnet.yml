@@ -23,6 +23,6 @@ jobs:
     - name: Restore dependencies
       run: dotnet restore EduTaskHub.sln
     - name: Build
-      run: dotnet build EduTaskHub.sln --no-restore
+      run: dotnet build ../EduTaskHub/EduTaskHub.sln --no-restore
     - name: Test
       run: dotnet test ./EduTaskHubTesting/EduTaskHubTesting.csproj --no-build --verbosity normal
