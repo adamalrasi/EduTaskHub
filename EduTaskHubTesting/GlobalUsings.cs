@@ -1,24 +1,27 @@
+
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using System.IO;
 using System;
 
-namespace HelloWorldTests
-{
-   [TestClass]
-   public class UnitTest1
-   {
-      private const string Expected = "Hello World!";
-      [TestMethod]
-      public void TestMethod1()
-      {
-         using (var sw = new StringWriter())
-         {
-            Console.SetOut(sw);
-            HelloWorld.Program.Main();
+using Xunit;
+using YourWebAppProject.Controllers; // Assuming your controller is in this namespace
 
-            var result = sw.ToString().Trim();
-            Assert.AreEqual(Expected, result);
-         }
-      }
-   }
+namespace YourWebAppTestProject.Tests
+{
+    public class HelloWorldControllerTests
+    {
+        [Fact]
+        public async void Get_Index_ReturnsHelloWorld()
+        {
+            // Arrange
+            var controller = new HomeController(); // Instantiate the controller directly
+
+            // Act
+            var result = await controller.Index(); // Call the Index action
+            var responseString = await result.Content.ReadAsStringAsync();
+
+            // Assert
+            Assert.Equal("Hello World!", responseString); // Verify the expected output
+        }
+    }
 }
