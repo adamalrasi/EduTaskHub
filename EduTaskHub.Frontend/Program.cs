@@ -1,4 +1,6 @@
-using EduTaskHub.Components;
+
+
+using EduTaskHub.Frontend.Components;
 
 var builder = WebApplication.CreateBuilder(args);
 
