@@ -3,25 +3,23 @@ using Microsoft.VisualStudio.TestTools.UnitTesting;
 using System.IO;
 using System;
 
-using Xunit;
-using YourWebAppProject.Controllers; // Assuming your controller is in this namespace
-
-namespace YourWebAppTestProject.Tests
+namespace SimpleTests
 {
-    public class HelloWorldControllerTests
+    [TestClass]
+    public class MathTests
     {
-        [Fact]
-        public async void Get_Index_ReturnsHelloWorld()
+        [TestMethod]
+        public void Add_TwoNumbers_ReturnsSum()
         {
             // Arrange
-            var controller = new HomeController(); // Instantiate the controller directly
+            int num1 = 5;
+            int num2 = 10;
 
             // Act
-            var result = await controller.Index(); // Call the Index action
-            var responseString = await result.Content.ReadAsStringAsync();
+            int result = Math.Add(num1, num2);
 
             // Assert
-            Assert.Equal("Hello World!", responseString); // Verify the expected output
+            Assert.AreEqual(15, result); // Verify the expected sum
         }
     }
 }
