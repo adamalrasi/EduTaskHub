@@ -1,5 +1,5 @@
-# EduTaskHub
-EduTaskHub is an open-source educational platform designed to simplify the process of distributing and marking coursework assignments for students and teachers. This platform aims to improve the efficiency of homework management and enhance collaboration within an educational environment.
+# Learnado
+![cap2](https://github.com/adamalrasi/EduTaskHub/assets/147779056/e279fb4a-95bc-4c47-a204-3aefa45d6f35)
 
 ## Features
 
