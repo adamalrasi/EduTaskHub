@@ -1,4 +1,4 @@
-# Learnado - Future of learning, Designed for Today. 
+# Learnado - Future of Learning, Designed for Today. 
 ![cap2](https://github.com/adamalrasi/EduTaskHub/assets/147779056/e279fb4a-95bc-4c47-a204-3aefa45d6f35)
 
 ## Features
